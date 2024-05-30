@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  core-web-next:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: core-web-next
+    container_name: core-web-next-demo
+    ports:
+      - "80:3000"
+    restart: unless-stopped

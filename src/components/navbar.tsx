@@ -68,7 +68,7 @@ const Navbar = () => {
                     Forum
                   </Link>
                   <Link
-                    href="/"
+                    href="/chat"
                     className="w-full px-6 py-2 mt-3 text-center text-white bg-indigo-600 rounded-md lg:ml-5"
                   >
                     Try our chatbot
@@ -96,7 +96,7 @@ const Navbar = () => {
 
           <div className="hidden mr-3 space-x-4 lg:flex nav__item">
             <Link
-              href="/"
+              href="/chat"
               className="px-6 py-2 text-white bg-indigo-600 rounded-md md:ml-5"
             >
               Try our chatbot

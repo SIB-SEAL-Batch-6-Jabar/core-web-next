@@ -18,7 +18,7 @@ const Cta = () => {
         </div>
         <div className="flex-shrink-0 w-full text-center lg:w-auto">
           <Link
-            href="/"
+            href="/test"
             className="inline-block py-3 mx-auto text-lg font-medium text-center text-indigo-600 bg-white rounded-md px-7 lg:px-10 lg:py-5 "
           >
             Start the Test

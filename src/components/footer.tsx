@@ -47,7 +47,7 @@ export default function Footer() {
               Chatbot
             </Link>
             <Link
-              href="/"
+              href="/test"
               className="w-full px-4 py-2 text-gray-500 rounded-md  hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none "
             >
               Take a test

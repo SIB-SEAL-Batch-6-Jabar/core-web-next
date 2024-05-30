@@ -8,7 +8,7 @@ const Benefits = (props: {
     image: string | StaticImageData;
     imgPos: string;
     title: string;
-    desc: string;
+    desc?: string;
     bullets: {
       title: string;
       desc: string;
@@ -48,10 +48,11 @@ const Benefits = (props: {
               <h3 className="max-w-2xl mt-3 text-3xl font-bold leading-snug tracking-tight text-gray-800 lg:leading-tight lg:text-4xl ">
                 {data.title}
               </h3>
-
-              <p className="max-w-2xl py-4 text-lg leading-normal text-gray-500 lg:text-xl xl:text-xl ">
-                {data.desc}
-              </p>
+              {data.desc && (
+                <p className="max-w-2xl py-4 text-lg leading-normal text-gray-500 lg:text-xl xl:text-xl ">
+                  {data.desc}
+                </p>
+              )}
             </div>
 
             <div className="w-full mt-5">

@@ -78,3 +78,189 @@ export const benefitThree = {
     },
   ],
 };
+
+export const testQuestions = [
+  {
+    title: "Diagnosed with high blood pressure",
+    name: "HighBP",
+    type: "options",
+    options: [
+      { title: "No high BP", value: 0 },
+      { title: "High BP", value: 1 },
+    ],
+  },
+  {
+    title: "Diagnosed with high cholesterol",
+    name: "HighChol",
+    type: "options",
+    options: [
+      { title: "No high cholesterol", value: 0 },
+      { title: "High cholesterol", value: 1 },
+    ],
+  },
+  {
+    title: "Did a cholesterol check in the last 5 years",
+    name: "CholCheck",
+    type: "options",
+    options: [
+      { title: "No", value: 0 },
+      { title: "Yes", value: 1 },
+    ],
+  },
+  {
+    title: "What is your Body Mass Index (BMI)?",
+    name: "BMI",
+    type: "continuous",
+  },
+  {
+    title:
+      "Have you smoked at least 100 cigarettes in your entire life? (Note: 5 packs = 100 cigarettes)",
+    name: "Smoker",
+    type: "options",
+    options: [
+      { title: "No", value: 0 },
+      { title: "Yes", value: 1 },
+    ],
+  },
+  {
+    title: "Have you ever had a stroke?",
+    name: "Stroke",
+    type: "options",
+    options: [
+      { title: "No", value: 0 },
+      { title: "Yes", value: 1 },
+    ],
+  },
+  {
+    title:
+      "Have you ever been told you had coronary heart disease (CHD) or myocardial infarction (MI)?",
+    name: "HeartDiseaseorAttack",
+    type: "options",
+    options: [
+      { title: "No", value: 0 },
+      { title: "Yes", value: 1 },
+    ],
+  },
+  {
+    title:
+      "Have you participated in any physical activity in the past 30 days?",
+    name: "PhysActivity",
+    type: "options",
+    options: [
+      { title: "No", value: 0 },
+      { title: "Yes", value: 1 },
+    ],
+  },
+  {
+    title: "Do you consume fruit 1 or more times per day?",
+    name: "Fruits",
+    type: "options",
+    options: [
+      { title: "No", value: 0 },
+      { title: "Yes", value: 1 },
+    ],
+  },
+  {
+    title: "Do you consume vegetables 1 or more times per day?",
+    name: "Veggies",
+    type: "options",
+    options: [
+      { title: "No", value: 0 },
+      { title: "Yes", value: 1 },
+    ],
+  },
+  {
+    title:
+      "Are you a heavy drinker? (Adult men having more than 14 drinks per week and adult women having more than 7 drinks per week)",
+    name: "HvyAlcoholConsump",
+    type: "options",
+    options: [
+      { title: "No", value: 0 },
+      { title: "Yes", value: 1 },
+    ],
+  },
+  {
+    title:
+      "Do you have any kind of health care coverage, including health insurance, prepaid plans such as HMO, etc.?",
+    name: "AnyHealthcare",
+    type: "options",
+    options: [
+      { title: "No", value: 0 },
+      { title: "Yes", value: 1 },
+    ],
+  },
+  {
+    title:
+      "Was there a time in the past 12 months when you needed to see a doctor but couldn't because of cost?",
+    name: "NoDocbcCost",
+    type: "options",
+    options: [
+      { title: "No", value: 0 },
+      { title: "Yes", value: 1 },
+    ],
+  },
+  {
+    title: "In general, would you say that your health is:",
+    name: "GenHlth",
+    type: "options",
+    options: [
+      { title: "Excellent", value: 1 },
+      { title: "Very good", value: 2 },
+      { title: "Good", value: 3 },
+      { title: "Fair", value: 4 },
+      { title: "Poor", value: 5 },
+    ],
+  },
+  {
+    title:
+      "Thinking about your mental health, which includes stress, depression, and problems with emotions, for how many days during the past 30 days was your mental health not good?",
+    name: "MentHlth",
+    type: "continuous",
+    range: "0-30",
+  },
+  {
+    title:
+      "Thinking about your physical health, which includes physical illness and injury, for how many days during the past 30 days was your physical health not good?",
+    name: "PhysHlth",
+    type: "continuous",
+    range: "0-30",
+  },
+  {
+    title: "Do you have serious difficulty walking or climbing stairs?",
+    name: "DiffWalk",
+    type: "options",
+    options: [
+      { title: "No", value: 0 },
+      { title: "Yes", value: 1 },
+    ],
+  },
+  {
+    title: "What is your sex?",
+    name: "Sex",
+    type: "options",
+    options: [
+      { title: "Female", value: 0 },
+      { title: "Male", value: 1 },
+    ],
+  },
+  {
+    title: "What is your age category?",
+    name: "Age",
+    type: "options",
+    options: [
+      { title: "18-24", value: 1 },
+      { title: "25-29", value: 2 },
+      { title: "30-34", value: 3 },
+      { title: "35-39", value: 4 },
+      { title: "40-44", value: 5 },
+      { title: "45-49", value: 6 },
+      { title: "50-54", value: 7 },
+      { title: "55-59", value: 8 },
+      { title: "60-64", value: 9 },
+      { title: "65-69", value: 10 },
+      { title: "70-74", value: 11 },
+      { title: "75-79", value: 12 },
+      { title: "80 or older", value: 13 },
+    ],
+  },
+];

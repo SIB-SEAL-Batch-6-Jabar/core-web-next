@@ -5,10 +5,10 @@ import Container from "./container";
 
 export default function Footer() {
   return (
-    <div className="relative">
+    <div className="relative bg-white  border-t border-gray-100 mt-10">
       <Container>
-        <div className="max-w-screen-xl flex flex-col items-center gap-10 border-t border-gray-100">
-          <div className="mt-10">
+        <div className="max-w-screen-xl flex flex-col items-center gap-10">
+          <div>
             <div>
               <Link
                 href="/"
@@ -35,10 +35,10 @@ export default function Footer() {
 
           <div>
             <Link
-              href="/"
+              href="/blog"
               className="w-full px-4 py-2 text-gray-500 rounded-md  hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none "
             >
-              Forum
+              Blog
             </Link>
             <Link
               href="/chat"

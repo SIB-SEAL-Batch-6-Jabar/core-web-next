@@ -1,0 +1,68 @@
+name: core-web-next deploy to EKS
+on:
+    push: 
+        branches: main
+    pull_request:
+        branches: main
+
+jobs:
+    deploy:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v3
+    
+            - name: Install kubectl
+              uses: azure/setup-kubectl@v3
+
+            - name: Configure AWS Credentials
+              uses: aws-actions/configure-aws-credentials@v4
+              with:
+                aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+                aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+                aws-session-token: ${{ secrets.AWS_SESSION_TOKEN}}
+                aws-region: ${{ vars.AWS_REGION }}
+
+            - name: Login to Amazon ECR
+              id: login-ecr
+              uses: aws-actions/amazon-ecr-login@v2
+
+            - name: add env
+              run: |
+                cat <<EOT >> .env
+                NEXT_PUBLIC_BACKEND_URL="http://localhost:5050"
+                GROQ_API_KEY="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"
+                
+                DATABASE_URL="postgresql://postgres:simanis123!@simanis-dev.cl4eug6aqfs3.ap-southeast-1.rds.amazonaws.com:5432/simanis"
+                
+                PAYLOAD_SECRET="i1}h?5{[*Pzu}5Mp9dw78tP!0r8Sm/Xkk!*6Pibqu4v5pF:PjN%V%7+D-VZ,=-a."
+                PAYLOAD_PUBLIC_SERVER_URL="http://localhost:3000"
+                
+                REVALIDATION_KEY="226c747798b8754fd4dbbd53f5f6fd648cbef9bdc52bafc30fc51e427c2e20dc7afcea33c1b7f4dc1fa78f58d2344f15fc03a29f08b6330990468976e915ac87"
+                NEXT_PRIVATE_REVALIDATION_KEY="226c747798b8754fd4dbbd53f5f6fd648cbef9bdc52bafc30fc51e427c2e20dc7afcea33c1b7f4dc1fa78f58d2344f15fc03a29f08b6330990468976e915ac87"
+                
+                S3_ACCESS_KEY_ID="AKIA5OETRXDHZUXE3F4J"
+                S3_SECRET_ACCESS_KEY="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"
+                S3_REGION="ap-southeast-1"
+                S3_ENDPOINT="s3.ap-southeast-1.amazonaws.com"
+                S3_BUCKET="simanis"
+                NEXT_PUBLIC_S3_HOSTNAME="simanis.s3.ap-southeast-1.amazonaws.com"
+                NEXT_PUBLIC_UPLOAD_PREFIX= # This is optional, should be a-z without /
+                EOT
+
+            - name: Build, tag, and push docker image to amazon ecr
+              env: 
+                REGISTRY: ${{steps.login-ecr.outputs.registry}}
+                REPOSITORY: simanis
+                IMAGE_TAG: latest
+              run: |
+                docker build -t $REGISTRY/$REPOSITORY:$IMAGE_TAG .
+                docker push $REGISTRY/$REPOSITORY:$IMAGE_TAG
+
+            - name: Update kube config
+              run: aws eks update-kubeconfig --name simanis-cluster
+
+            - name: Deploy to EKS
+              run: |
+                kubectl apply -f deployment.yaml
+                kubectl apply -f service.yaml

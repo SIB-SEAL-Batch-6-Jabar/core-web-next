@@ -38,6 +38,7 @@ function Hero() {
               height="617"
               className={"object-cover"}
               alt="Hero Illustration"
+              loading="eager"
             />
           </div>
         </div>

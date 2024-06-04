@@ -13,7 +13,7 @@ function ChatPage() {
 }
 
 export const metadata: Metadata = {
-  title: "Simanis: Chatbot",
+  title: "Chatbot",
   description: "Chat with our AI assistant to get personalized assistance.",
 };
 

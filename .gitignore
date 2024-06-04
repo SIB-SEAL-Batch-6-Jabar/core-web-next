@@ -16,6 +16,17 @@
 # production
 /build
 
+# Ignore Workbox generated files
+public/workbox-*.js
+public/workbox-*.js.map
+
+# Ignore other generated service worker files if they are generated
+public/sw.js
+public/sw.js.map
+
+# Ignore custom generated service worker files
+public/swe-worker-development.js
+
 # misc
 .DS_Store
 

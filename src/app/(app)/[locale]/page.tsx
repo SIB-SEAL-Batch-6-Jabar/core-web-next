@@ -16,6 +16,7 @@ import {
   FireIcon,
   HandRaisedIcon,
 } from "@heroicons/react/24/solid";
+import { Metadata } from "next";
 
 export default function Home() {
   const t = useTranslations("index");
@@ -109,3 +110,8 @@ export default function Home() {
     </>
   );
 }
+
+export const metadata: Metadata = {
+  title: "Home",
+  description: "Your On-The-Go Diabetes Risk Test App",
+};

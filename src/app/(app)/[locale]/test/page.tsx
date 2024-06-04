@@ -60,7 +60,7 @@ function TestPage() {
 }
 
 export const metadata: Metadata = {
-  title: "Simanis: Diabetes Test",
+  title: "Diabetes Test",
   description: "Find out if you're at risk with our quick and easy test!",
 };
 

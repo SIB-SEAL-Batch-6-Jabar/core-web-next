@@ -70,7 +70,7 @@ async function BlogPage({
 }
 
 export const metadata: Metadata = {
-  title: "Simanis: Blog",
+  title: "Blog",
   description: "Read the latest articles on diabetes and health",
 };
 

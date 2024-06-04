@@ -1,0 +1,283 @@
+{
+  "global": {
+    "navbar": {
+      "blog": "Blog",
+      "chatbot": "Coba Chatbot Kami"
+    },
+    "footer": {
+      "description": "Simanis adalah aplikasi tes diabetes yang praktis, menawarkan tes diabetes yang mudah, chatbot yang membantu untuk bantuan yang dipersonalisasi, dan berbagai jenis posting blog tentang diabetes dan kesehatan.",
+      "links": {
+        "blog": "Blog",
+        "chatbot": "Chatbot",
+        "test": "Ikuti Tes"
+      }
+    },
+    "localeSwitcher": {
+      "label": "Pilih Bahasa",
+      "locale": "{locale, select, id {/img/id.png} en {/img/usa.png} other {Unknown}}"
+    }
+  },
+  "index": {
+    "hero": {
+      "title": "Kendalikan Kesehatan Anda Hari Ini",
+      "subtitle": "Apakah Anda khawatir tentang diabetes? Deteksi dini adalah kunci untuk mengelola dan mencegah diabetes. Ikuti tes cepat dan mudah kami untuk mengetahui apakah Anda berisiko terkena diabetes, pradiabetes, atau jika Anda bebas dari risiko.",
+      "button": "Ikuti Tes"
+    },
+    "diabetes": {
+      "pretitle": "MEMAHAMI DIABETES",
+      "title": "Apa Itu Diabetes?",
+      "subtitle": "Diabetes adalah kondisi kronis yang mempengaruhi jutaan orang di seluruh dunia. Kondisi ini terjadi ketika tubuh Anda tidak mampu memproses gula dengan baik, yang mengarah ke kadar gula darah tinggi. Memahami risiko Anda dapat membantu Anda mengambil langkah proaktif untuk mengelola kesehatan Anda."
+    },
+    "benefit-1": {
+      "title": "Mengapa Tes Diabetes?",
+      "description": "Deteksi dini adalah kunci untuk mengelola dan mencegah diabetes. Ikuti tes cepat dan mudah kami untuk mengetahui apakah Anda berisiko terkena diabetes, pradiabetes, atau jika Anda bebas dari risiko.",
+      "children": {
+        "one": {
+          "title": "Cegah Komplikasi",
+          "description": "Diabetes dapat menyebabkan komplikasi serius, termasuk penyakit jantung, stroke, dan gagal ginjal. Deteksi dini dapat membantu Anda mengambil langkah untuk mencegah masalah ini."
+        },
+        "two": {
+          "title": "Kelola Kesehatan Anda",
+          "description": "Mengetahui risiko diabetes Anda dapat membantu Anda membuat keputusan yang tepat tentang kesehatan Anda. Dengan mengikuti tes kami, Anda dapat memperoleh informasi yang Anda butuhkan untuk mengendalikan kesehatan Anda."
+        },
+        "three": {
+          "title": "Hidupkan Hidup Terbaik Anda",
+          "description": "Diabetes tidak harus menahan Anda. Dengan memahami risiko Anda dan mengambil langkah proaktif untuk mengelola kesehatan Anda, Anda dapat menjalani kehidupan yang penuh dan aktif."
+        }
+      }
+    },
+    "benefit-2": {
+      "title": "Tanda-tanda Diabetes yang Harus Diwaspadai",
+      "description": "Diabetes bisa menjadi kondisi yang diam-diam, tetapi ada tanda-tanda dan gejala yang harus diwaspadai. Jika Anda mengalami gejala-gejala ini, penting untuk berbicara dengan penyedia layanan kesehatan Anda.",
+      "children": {
+        "one": {
+          "title": "Meningkatnya Rasa Haus dan Sering Buang Air Kecil",
+          "description": "Kadar gula darah yang tinggi menyebabkan lebih banyak cairan ditarik dari jaringan Anda, membuat Anda merasa haus dan menyebabkan lebih sering ke kamar mandi."
+        },
+        "two": {
+          "title": "Kelelahan Ekstrem",
+          "description": "Ketika tubuh Anda tidak bisa menggunakan gula untuk energi, ia mulai memecah lemak dan otot untuk bahan bakar, yang dapat membuat Anda merasa sangat lelah."
+        },
+        "three": {
+          "title": "Penglihatan Kabur",
+          "description": "Kadar gula darah yang tinggi dapat menyebabkan lensa mata Anda membengkak, yang menyebabkan masalah penglihatan."
+        }
+      }
+    },
+    "benefit-3": {
+      "title": "Ikuti Tes Sekarang!",
+      "description": "Cukup jawab beberapa pertanyaan tentang gaya hidup dan kesehatan Anda. Algoritma kami akan menganalisis jawaban Anda dan mengkategorikan risiko Anda ke dalam salah satu dari tiga kategori:",
+      "children": {
+        "one": {
+          "title": "Tidak Ada Diabetes",
+          "description": "Kabar baik! Pelajari cara menjaga gaya hidup sehat Anda."
+        },
+        "two": {
+          "title": "Prediabetes",
+          "description": "Anda berisiko, tetapi masih ada waktu untuk membuat perubahan. Temukan langkah-langkah untuk mencegah diabetes."
+        },
+        "three": {
+          "title": "Diabetes",
+          "description": "Penting untuk bertindak sekarang. Temukan cara mengelola kondisi Anda dengan efektif."
+        }
+      }
+    },
+    "faq": {
+      "pretitle": "FAQ",
+      "title": "Pertanyaan yang Sering Diajukan",
+      "subtitle": "Jelajahi Pertanyaan Umum Tentang Tes Ini dan Diabetes",
+      "questions": {
+        "one": {
+          "question": "Berapa lama waktu yang dibutuhkan untuk tes ini?",
+          "answer": "Tes ini memakan waktu sekitar 5 menit untuk diselesaikan."
+        },
+        "two": {
+          "question": "Apakah informasi saya aman?",
+          "answer": "Tentu saja. Kami memprioritaskan privasi Anda dan memastikan bahwa semua data disimpan secara rahasia."
+        },
+        "three": {
+          "question": "Apa yang terjadi jika saya berisiko terkena diabetes?",
+          "answer": "Jika hasil Anda menunjukkan pradiabetes atau diabetes, kami akan memberikan sumber daya dan langkah selanjutnya untuk mengelola kesehatan Anda."
+        },
+        "four": {
+          "question": "Bisakah saya mengikuti tes ini lebih dari sekali?",
+          "answer": "Ya, Anda dapat mengikuti tes ini sesering yang Anda inginkan untuk memantau risiko Anda."
+        }
+      }
+    },
+    "cta": {
+      "title": "Siap untuk Memulai?",
+      "subtitle": "Kesehatan Anda ada di tangan Anda. Jangan tunggu sampai terlambat. Klik tombol untuk mengikuti tes dan ambil langkah pertama menuju Anda yang lebih sehat.",
+      "button": "Mulai Tes"
+    }
+  },
+  "test": {
+    "benefit": {
+      "title": "Cara Mengikuti Tes",
+      "children": {
+        "one": {
+          "title": "Mulai Tes",
+          "description": "Klik tombol di atas untuk memulai tes."
+        },
+        "two": {
+          "title": "Jawab Pertanyaan",
+          "description": "Jawab serangkaian pertanyaan tentang gaya hidup dan kesehatan Anda."
+        },
+        "three": {
+          "title": "Kirim Jawaban Anda",
+          "description": "Setelah Anda menyelesaikan semua pertanyaan, kirim jawaban Anda."
+        },
+        "four": {
+          "title": "Terima Hasil melalui Email",
+          "description": "Hasil Anda akan diproses sesuai dengan antrian dan dikirim ke email Anda."
+        }
+      }
+    }
+  },
+  "questions": {
+    "Email": {
+      "title": "Alamat Email",
+      "description": "Kami membutuhkan alamat email Anda untuk mengirimkan hasil tes."
+    },
+    "Sex": {
+      "title": "Apa jenis kelamin Anda?",
+      "options": {
+        "female": "Perempuan",
+        "male": "Laki-laki"
+      }
+    },
+    "Age": {
+      "title": "Berapa kategori usia Anda?",
+      "options": {
+        "18-24": "18-24",
+        "25-29": "25-29",
+        "30-34": "30-34",
+        "35-39": "35-39",
+        "40-44": "40-44",
+        "45-49": "45-49",
+        "50-54": "50-54",
+        "55-59": "55-59",
+        "60-64": "60-64",
+        "65-69": "65-69",
+        "70-74": "70-74",
+        "75-79": "75-79",
+        "80orolder": "80 atau lebih"
+      }
+    },
+    "HighBP": {
+      "title": "Didiagnosis dengan tekanan darah tinggi",
+      "options": {
+        "nohighbp": "Tidak tekanan darah tinggi",
+        "highbp": "Tekanan darah tinggi"
+      }
+    },
+    "HighChol": {
+      "title": "Didiagnosis dengan kolesterol tinggi",
+      "options": {
+        "nohighcholesterol": "Tidak kolesterol tinggi",
+        "highcholesterol": "Kolesterol tinggi"
+      }
+    },
+    "CholCheck": {
+      "title": "Melakukan cek kolesterol dalam 5 tahun terakhir",
+      "options": {
+        "no": "Tidak",
+        "yes": "Ya"
+      }
+    },
+    "BMI": {
+      "title": "Berapa Indeks Massa Tubuh (BMI) Anda?",
+      "description": "BMI = Berat(Kg) / Tinggi(m)"
+    },
+    "Smoker": {
+      "title": "Apakah Anda pernah merokok setidaknya 100 batang rokok dalam hidup Anda? (Catatan: 5 bungkus = 100 batang rokok)",
+      "options": {
+        "no": "Tidak",
+        "yes": "Ya"
+      }
+    },
+    "Stroke": {
+      "title": "Apakah Anda pernah mengalami stroke?",
+      "options": {
+        "no": "Tidak",
+        "yes": "Ya"
+      }
+    },
+    "HeartDiseaseorAttack": {
+      "title": "Apakah Anda pernah diberitahu bahwa Anda menderita penyakit jantung koroner (CHD) atau serangan jantung (MI)?",
+      "options": {
+        "no": "Tidak",
+        "yes": "Ya"
+      }
+    },
+    "PhysActivity": {
+      "title": "Apakah Anda berpartisipasi dalam aktivitas fisik dalam 30 hari terakhir?",
+      "options": {
+        "no": "Tidak",
+        "yes": "Ya"
+      }
+    },
+    "Fruits": {
+      "title": "Apakah Anda mengkonsumsi buah 1 atau lebih kali per hari?",
+      "options": {
+        "no": "Tidak",
+        "yes": "Ya"
+      }
+    },
+    "Veggies": {
+      "title": "Apakah Anda mengkonsumsi sayuran 1 atau lebih kali per hari?",
+      "options": {
+        "no": "Tidak",
+        "yes": "Ya"
+      }
+    },
+    "HvyAlcoholConsump": {
+      "title": "Apakah Anda seorang peminum berat? (Pria dewasa mengkonsumsi lebih dari 14 minuman per minggu dan wanita dewasa mengkonsumsi lebih dari 7 minuman per minggu)",
+      "options": {
+        "no": "Tidak",
+        "yes": "Ya"
+      }
+    },
+    "AnyHealthcare": {
+      "title": "Apakah Anda memiliki jenis perlindungan kesehatan, termasuk asuransi kesehatan, rencana prabayar seperti HMO, dll.?",
+      "options": {
+        "no": "Tidak",
+        "yes": "Ya"
+      }
+    },
+    "NoDocbcCost": {
+      "title": "Apakah ada waktu dalam 12 bulan terakhir ketika Anda perlu menemui dokter tetapi tidak bisa karena biaya?",
+      "options": {
+        "no": "Tidak",
+        "yes": "Ya"
+      }
+    },
+    "GenHlth": {
+      "title": "Secara umum, apakah Anda mengatakan bahwa kesehatan Anda:",
+      "options": {
+        "excellent": "Sangat baik",
+        "verygood": "Sangat baik",
+        "good": "Baik",
+        "fair": "Cukup",
+        "poor": "Buruk"
+      }
+    },
+    "MentHlth": {
+      "title": "Memikirkan tentang kesehatan mental Anda, yang mencakup stres, depresi, dan masalah dengan emosi, selama berapa hari dalam 30 hari terakhir kesehatan mental Anda tidak baik?"
+    },
+    "PhysHlth": {
+      "title": "Memikirkan tentang kesehatan fisik Anda, yang mencakup penyakit fisik dan cedera, selama berapa hari dalam 30 hari terakhir kesehatan fisik Anda tidak baik?"
+    },
+    "DiffWalk": {
+      "title": "Apakah Anda mengalami kesulitan serius dalam berjalan atau naik tangga?",
+      "options": {
+        "no": "Tidak",
+        "yes": "Ya"
+      }
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Temukan Artikel Terbaru tentang Diabetes dan Kesehatan"
+  }
+}

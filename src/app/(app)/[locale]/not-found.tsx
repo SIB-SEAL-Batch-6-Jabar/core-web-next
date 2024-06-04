@@ -2,7 +2,7 @@ import Container from "@/components/container";
 import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/navigation";
 import React from "react";
 
 function NotFound() {

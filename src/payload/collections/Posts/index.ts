@@ -31,6 +31,7 @@ export const Posts: CollectionConfig = {
       label: "Title",
       type: "text",
       required: true,
+      localized: true,
     },
     {
       name: "cover",
@@ -44,12 +45,14 @@ export const Posts: CollectionConfig = {
       label: "Excerpt",
       type: "textarea",
       required: true,
+      localized: true,
     },
     {
       name: "content",
       label: "Content",
       type: "richText",
       required: true,
+      localized: true,
     },
     lexicalHTML("content", {
       name: "content_html",

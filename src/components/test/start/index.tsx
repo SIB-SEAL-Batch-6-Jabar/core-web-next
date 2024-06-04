@@ -1,10 +1,5 @@
 "use client";
 import React, { useState } from "react";
-
-import SectionTitle from "@/components/section-title";
-import Benefits from "@/components/benefits";
-import { ChevronRightIcon } from "@heroicons/react/24/solid";
-
 import Container from "@/components/container";
 import { Button } from "@headlessui/react";
 import InputForm from "@/components/form/input";
@@ -15,14 +10,16 @@ import { AxiosError } from "axios";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
 import { ArrowPathIcon } from "@heroicons/react/20/solid";
+import { TestMessage } from "../../../../global";
+import { useTranslations } from "next-intl";
 
-function Test() {
+function StartTest() {
+  const t = useTranslations("questions");
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<{ [key: string]: string[] }>({});
   const [answer, setAnswer] = useState<{
     [key: string]: string | number | undefined;
   }>({});
-  const [start, setStart] = useState<boolean>(false);
 
   const handleChange: React.ChangeEventHandler<
     HTMLInputElement | HTMLSelectElement
@@ -161,7 +158,7 @@ function Test() {
     }
   };
 
-  return start ? (
+  return (
     <Container className="bg-white rounded mt-2 xl:px-4">
       <form onSubmit={handleSubmit}>
         <h2 className="max-w-2xl text-3xl font-bold leading-snug tracking-tight text-gray-800 lg:leading-tight lg:text-4xl">
@@ -172,220 +169,220 @@ function Test() {
           <div className="flex flex-col w-full gap-4">
             <InputForm
               name="Email"
-              title="Email Address"
+              title={t("Email.title")}
               onChange={handleChange}
-              description="We need your email address for sending the test result only."
+              description={t("Email.description")}
               required
               disabled={loading}
               type="email"
               error={error["Email"]?.join(", ")}
             />
             <SelectForm
-              title="What is your sex?"
+              title={t("Sex.title")}
               onChange={handleChange}
               name="Sex"
               required
               disabled={loading}
               options={[
-                { title: "Female", value: 0.0 },
-                { title: "Male", value: 1.0 },
+                { title: t("Sex.options.female"), value: 0.0 },
+                { title: t("Sex.options.male"), value: 1.0 },
               ]}
               error={error["Sex"]?.join(", ")}
             />
             <SelectForm
-              title="What is your age category?"
+              title={t("Age.title")}
               onChange={handleChange}
               name="Age"
               required
               disabled={loading}
               error={error["Age"]?.join(", ")}
               options={[
-                { title: "18-24", value: 1 },
-                { title: "25-29", value: 2 },
-                { title: "30-34", value: 3 },
-                { title: "35-39", value: 4 },
-                { title: "40-44", value: 5 },
-                { title: "45-49", value: 6 },
-                { title: "50-54", value: 7 },
-                { title: "55-59", value: 8 },
-                { title: "60-64", value: 9 },
-                { title: "65-69", value: 10 },
-                { title: "70-74", value: 11 },
-                { title: "75-79", value: 12 },
-                { title: "80 or older", value: 13 },
+                { title: t("Age.options.18-24"), value: 1 },
+                { title: t("Age.options.25-29"), value: 2 },
+                { title: t("Age.options.30-34"), value: 3 },
+                { title: t("Age.options.35-39"), value: 4 },
+                { title: t("Age.options.40-44"), value: 5 },
+                { title: t("Age.options.45-49"), value: 6 },
+                { title: t("Age.options.50-54"), value: 7 },
+                { title: t("Age.options.55-59"), value: 8 },
+                { title: t("Age.options.60-64"), value: 9 },
+                { title: t("Age.options.65-69"), value: 10 },
+                { title: t("Age.options.70-74"), value: 11 },
+                { title: t("Age.options.75-79"), value: 12 },
+                { title: t("Age.options.80orolder"), value: 13 },
               ]}
             />
             <SelectForm
-              title="Diagnosed with high blood pressure"
+              title={t("HighBP.title")}
               onChange={handleChange}
               name="HighBP"
               required
               disabled={loading}
               options={[
-                { title: "No high BP", value: 0 },
-                { title: "High BP", value: 1 },
+                { title: t("HighBP.options.nohighbp"), value: 0 },
+                { title: t("HighBP.options.highbp"), value: 1 },
               ]}
               error={error["HighBP"]?.join(", ")}
             />
             <SelectForm
-              title="Diagnosed with high cholesterol"
+              title={t("HighChol.title")}
               onChange={handleChange}
               name="HighChol"
               required
               disabled={loading}
               options={[
-                { title: "No high cholesterol", value: 0 },
-                { title: "High cholesterol", value: 1 },
+                { title: t("HighChol.options.nohighcholesterol"), value: 0 },
+                { title: t("HighChol.options.highcholesterol"), value: 1 },
               ]}
               error={error["HighChol"]?.join(", ")}
             />
             <SelectForm
-              title="Did a cholesterol check in the last 5 years"
+              title={t("CholCheck.title")}
               onChange={handleChange}
               name="CholCheck"
               required
               disabled={loading}
               options={[
-                { title: "No", value: 0 },
-                { title: "Yes", value: 1 },
+                { title: t("CholCheck.options.no"), value: 0 },
+                { title: t("CholCheck.options.yes"), value: 1 },
               ]}
               error={error["CholCheck"]?.join(", ")}
             />
             <InputForm
               name="BMI"
-              title="What is your Body Mass Index (BMI)?"
+              title={t("BMI.title")}
               onChange={handleChange}
-              description="BMI = Weight(Kg) / Height(m)"
+              description={t("BMI.description")}
               type="number"
               error={error["BMI"]?.join(", ")}
             />
             <SelectForm
-              title="Have you smoked at least 100 cigarettes in your entire life? (Note: 5 packs = 100 cigarettes)"
+              title={t("Smoker.title")}
               onChange={handleChange}
               name="Smoker"
               required
               disabled={loading}
               options={[
-                { title: "No", value: 0 },
-                { title: "Yes", value: 1 },
+                { title: t("Smoker.options.no"), value: 0 },
+                { title: t("Smoker.options.yes"), value: 1 },
               ]}
               error={error["Smoker"]?.join(", ")}
             />
             <SelectForm
-              title="Have you ever had a stroke?"
+              title={t("Stroke.title")}
               onChange={handleChange}
               name="Stroke"
               required
               disabled={loading}
               options={[
-                { title: "No", value: 0 },
-                { title: "Yes", value: 1 },
+                { title: t("Stroke.options.no"), value: 0 },
+                { title: t("Stroke.options.yes"), value: 1 },
               ]}
               error={error["Stroke"]?.join(", ")}
             />
             <SelectForm
-              title="Have you ever been told you had coronary heart disease (CHD) or myocardial infarction (MI)?"
+              title={t("HeartDiseaseorAttack.title")}
               onChange={handleChange}
               name="HeartDiseaseorAttack"
               required
               disabled={loading}
               options={[
-                { title: "No", value: 0 },
-                { title: "Yes", value: 1 },
+                { title: t("HeartDiseaseorAttack.options.no"), value: 0 },
+                { title: t("HeartDiseaseorAttack.options.yes"), value: 1 },
               ]}
               error={error["HeartDiseaseorAttack"]?.join(", ")}
             />
             <SelectForm
-              title="Have you participated in any physical activity in the past 30 days?"
+              title={t("PhysActivity.title")}
               onChange={handleChange}
               name="PhysActivity"
               required
               disabled={loading}
               options={[
-                { title: "No", value: 0 },
-                { title: "Yes", value: 1 },
+                { title: t("PhysActivity.options.no"), value: 0 },
+                { title: t("PhysActivity.options.yes"), value: 1 },
               ]}
               error={error["PhysActivity"]?.join(", ")}
             />
           </div>
           <div className="flex flex-col w-full  gap-4">
             <SelectForm
-              title="Do you consume fruit 1 or more times per day?"
+              title={t("Fruits.title")}
               onChange={handleChange}
               name="Fruits"
               required
               disabled={loading}
               options={[
-                { title: "No", value: 0 },
-                { title: "Yes", value: 1 },
+                { title: t("Fruits.options.no"), value: 0 },
+                { title: t("Fruits.options.yes"), value: 1 },
               ]}
               error={error["Fruits"]?.join(", ")}
             />
             <SelectForm
-              title="Do you consume vegetables 1 or more times per day?"
+              title={t("Veggies.title")}
               onChange={handleChange}
               name="Veggies"
               required
               disabled={loading}
               options={[
-                { title: "No", value: 0 },
-                { title: "Yes", value: 1 },
+                { title: t("Veggies.options.no"), value: 0 },
+                { title: t("Veggies.options.yes"), value: 1 },
               ]}
               error={error["Veggies"]?.join(", ")}
             />
             <SelectForm
-              title="Are you a heavy drinker? (Adult men having more than 14 drinks per week and adult women having more than 7 drinks per week)"
+              title={t("HvyAlcoholConsump.title")}
               onChange={handleChange}
               name="HvyAlcoholConsump"
               required
               disabled={loading}
               options={[
-                { title: "No", value: 0 },
-                { title: "Yes", value: 1 },
+                { title: t("HvyAlcoholConsump.options.no"), value: 0 },
+                { title: t("HvyAlcoholConsump.options.yes"), value: 1 },
               ]}
               error={error["HvyAlcoholConsump"]?.join(", ")}
             />
             <SelectForm
-              title="Do you have any kind of health care coverage, including health insurance, prepaid plans such as HMO, etc.?"
+              title={t("AnyHealthcare.title")}
               onChange={handleChange}
               name="AnyHealthcare"
               required
               disabled={loading}
               options={[
-                { title: "No", value: 0 },
-                { title: "Yes", value: 1 },
+                { title: t("AnyHealthcare.options.no"), value: 0 },
+                { title: t("AnyHealthcare.options.yes"), value: 1 },
               ]}
               error={error["AnyHealthcare"]?.join(", ")}
             />
             <SelectForm
-              title="Was there a time in the past 12 months when you needed to see a doctor but couldn't because of cost?"
+              title={t("NoDocbcCost.title")}
               onChange={handleChange}
               name="NoDocbcCost"
               required
               disabled={loading}
               options={[
-                { title: "No", value: 0 },
-                { title: "Yes", value: 1 },
+                { title: t("NoDocbcCost.options.no"), value: 0 },
+                { title: t("NoDocbcCost.options.yes"), value: 1 },
               ]}
               error={error["NoDocbcCost"]?.join(", ")}
             />
             <SelectForm
-              title="In general, would you say that your health is:"
+              title={t("GenHlth.title")}
               onChange={handleChange}
               name="GenHlth"
               required
               disabled={loading}
               options={[
-                { title: "Excellent", value: 1 },
-                { title: "Very good", value: 2 },
-                { title: "Good", value: 3 },
-                { title: "Fair", value: 4 },
-                { title: "Poor", value: 5 },
+                { title: t("GenHlth.options.excellent"), value: 1 },
+                { title: t("GenHlth.options.verygood"), value: 2 },
+                { title: t("GenHlth.options.good"), value: 3 },
+                { title: t("GenHlth.options.fair"), value: 4 },
+                { title: t("GenHlth.options.poor"), value: 5 },
               ]}
               error={error["GenHlth"]?.join(", ")}
             />
             <InputForm
-              title="Thinking about your mental health, which includes stress, depression, and problems with emotions, for how many days during the past 30 days was your mental health not good?"
+              title={t("MentHlth.title")}
               onChange={handleChange}
               name="MentHlth"
               type="number"
@@ -394,7 +391,7 @@ function Test() {
               error={error["MentHlth"]?.join(", ")}
             />
             <InputForm
-              title="Thinking about your physical health, which includes physical illness and injury, for how many days during the past 30 days was your physical health not good?"
+              title={t("PhysHlth.title")}
               onChange={handleChange}
               name="PhysHlth"
               type="number"
@@ -403,14 +400,14 @@ function Test() {
               error={error["PhysHlth"]?.join(", ")}
             />
             <SelectForm
-              title="Do you have serious difficulty walking or climbing stairs?"
+              title={t("DiffWalk.title")}
               onChange={handleChange}
               name="DiffWalk"
               required
               disabled={loading}
               options={[
-                { title: "No", value: 0 },
-                { title: "Yes", value: 1 },
+                { title: t("DiffWalk.options.no"), value: 0 },
+                { title: t("DiffWalk.options.yes"), value: 1 },
               ]}
               error={error["DiffWalk"]?.join(", ")}
             />
@@ -420,7 +417,7 @@ function Test() {
               disabled={loading}
             >
               {loading ? (
-                <ArrowPathIcon className="animate-spin h-6 w-6 mx-auto" />
+                <ArrowPathIcon className="h-5 w-5 mx-auto animate-reverse-spin" />
               ) : (
                 "Submit"
               )}
@@ -429,53 +426,7 @@ function Test() {
         </div>
       </form>
     </Container>
-  ) : (
-    <div className="flex flex-col items-center ">
-      <SectionTitle
-        pretitle="Are you concerned about diabetes?"
-        title="Find out if you're at risk with our quick and easy test!"
-      >
-        Taking just a few minutes to complete, our diabetes risk test helps you
-        understand your current health status. Follow these simple steps to take
-        control of your health.
-      </SectionTitle>
-      <button
-        className="px-6 py-2 text-white bg-indigo-600 rounded-md"
-        onClick={() => setStart(true)}
-      >
-        Start the test
-      </button>
-      {/* <Benefits
-        data={{
-          title: "How to Take the Test",
-          imgPos: "left",
-          image: "/img/test.svg",
-          bullets: [
-            {
-              title: "Start the Test",
-              desc: "Click the button above to start the test.",
-              icon: <ChevronRightIcon />,
-            },
-            {
-              title: "Answer Questions",
-              desc: "Provide accurate answers based on your medical history and current lifestyle.",
-              icon: <ChevronRightIcon />,
-            },
-            {
-              title: "Submit Your Answers",
-              desc: "Once you've completed all the questions, submit your responses.",
-              icon: <ChevronRightIcon />,
-            },
-            {
-              title: "Receive Results via Email",
-              desc: "Your results will be processed according to the queue and sent to your email.",
-              icon: <ChevronRightIcon />,
-            },
-          ],
-        }}
-      /> */}
-    </div>
   );
 }
 
-export default Test;
+export default StartTest;

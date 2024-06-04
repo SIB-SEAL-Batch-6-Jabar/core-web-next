@@ -28,6 +28,11 @@ export default buildConfig({
   admin: {
     user: Users.slug,
   },
+  localization: {
+    locales: ["en", "id"],
+    defaultLocale: "en",
+    fallback: true
+  },
   collections: [Users, Posts, Media],
   editor: lexicalEditor({
     features: ({ defaultFeatures }) => [

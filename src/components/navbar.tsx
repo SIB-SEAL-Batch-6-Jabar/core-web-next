@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/navigation";
 // import ThemeChanger from "./DarkSwitch";
 import Image from "next/image";
 import {
@@ -8,9 +8,11 @@ import {
   DisclosureButton,
   DisclosurePanel,
 } from "@headlessui/react";
+import { useTranslations } from "next-intl";
+import LocaleSwitcher from "./localeSwitcher";
 
 const Navbar = () => {
-  const navigation = ["Forum"];
+  const t = useTranslations("global.navbar");
 
   return (
     <div className="w-full sticky top-0 bg-white/90 backdrop-blur-sm z-50">
@@ -20,20 +22,23 @@ const Navbar = () => {
           {({ open }) => (
             <>
               <div className="flex flex-wrap items-center justify-between w-full lg:w-auto">
-                <Link href="/">
-                  <span className="flex items-center space-x-2 text-2xl font-medium text-indigo-500 ">
-                    <span>
-                      <Image
-                        src="/img/logo.svg"
-                        alt="N"
-                        width="32"
-                        height="32"
-                        className="w-8"
-                      />
+                <div className="flex gap-4 items-center">
+                  <Link href="/">
+                    <span className="flex items-center space-x-2 text-2xl font-medium text-indigo-500 ">
+                      <span>
+                        <Image
+                          src="/img/logo.svg"
+                          alt="N"
+                          width="32"
+                          height="32"
+                          className="w-8"
+                        />
+                      </span>
+                      <span>Simanis</span>
                     </span>
-                    <span>Simanis</span>
-                  </span>
-                </Link>
+                  </Link>
+                  <LocaleSwitcher />
+                </div>
 
                 <DisclosureButton
                   aria-label="Toggle Menu"
@@ -65,13 +70,13 @@ const Navbar = () => {
                     href="/blog"
                     className="w-full px-4 py-2 -ml-4 text-gray-500 rounded-md hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100  focus:outline-none"
                   >
-                    Blog
+                    {t("blog")}
                   </Link>
                   <Link
                     href="/chat"
                     className="w-full px-6 py-2 mt-3 text-center text-white bg-indigo-600 rounded-md lg:ml-5"
                   >
-                    Try our chatbot
+                    {t("chatbot")}
                   </Link>
                 </DisclosurePanel>
               </div>
@@ -88,7 +93,7 @@ const Navbar = () => {
                   href="/blog"
                   className="inline-block px-4 py-2 text-lg font-normal text-gray-800 no-underline rounded-md  hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none "
                 >
-                  Blog
+                  {t("blog")}
                 </Link>
               </li>
             </ul>
@@ -99,7 +104,7 @@ const Navbar = () => {
               href="/chat"
               className="px-6 py-2 text-white bg-indigo-600 rounded-md md:ml-5"
             >
-              Try our chatbot
+              {t("chatbot")}
             </Link>
 
             {/* <ThemeChanger /> */}

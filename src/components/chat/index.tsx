@@ -1,7 +1,10 @@
 "use client";
 
 import React, { useState } from "react";
-import { continueConversation, Message } from "@/app/(app)/chat/actions";
+import {
+  continueConversation,
+  Message,
+} from "@/app/(app)/[locale]/chat/actions";
 import { readStreamableValue } from "ai/rsc";
 import Image from "next/image";
 import { PaperAirplaneIcon } from "@heroicons/react/24/solid";

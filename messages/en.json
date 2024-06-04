@@ -1,0 +1,283 @@
+{
+  "global": {
+    "navbar": {
+      "blog": "Blog",
+      "chatbot": "Try our Chatbot"
+    },
+    "footer": {
+      "description": "Simanis is your on-the-go diabetes test app, offering a convenient diabetes test, a helpful chatbot for personalized assistance, and a various kinds of blog post about diabetes and health.",
+      "links": {
+        "blog": "Blog",
+        "chatbot": "Chatbot",
+        "test": "Take a test"
+      }
+    },
+    "localeSwitcher": {
+      "label": "Change language",
+      "locale": "{locale, select, id {/img/id.png} en {/img/usa.png} other {Unknown}}"
+    }
+  },
+  "index": {
+    "hero": {
+      "title": "Take Control of Your Health Today",
+      "subtitle": "Are you concerned about diabetes? Early detection is key to managing and preventing diabetes. Take our quick and easy test to find out if you're at risk for diabetes, prediabetes, or if you're in the clear.",
+      "button": "Take a test"
+    },
+    "diabetes": {
+      "pretitle": "UNDERSTANDING DIABETES",
+      "title": "What is Diabetes?",
+      "subtitle": "Diabetes is a chronic condition that affects millions of people worldwide. It occurs when your body is unable to properly process sugar, leading to high blood sugar levels. Understanding your risk can help you take proactive steps to manage your health."
+    },
+    "benefit-1": {
+      "title": "Why Test for Diabetes?",
+      "description": "Early detection is key to managing and preventing diabetes. Take our quick and easy test to find out if you're at risk for diabetes, prediabetes, or if you're in the clear.",
+      "children": {
+        "one": {
+          "title": "Prevent Complications",
+          "description": "Diabetes can lead to serious complications, including heart disease, stroke, and kidney failure. Early detection can help you take steps to prevent these issues."
+        },
+        "two": {
+          "title": "Manage Your Health",
+          "description": "Knowing your risk for diabetes can help you make informed decisions about your health. By taking our test, you can get the information you need to take control of your health."
+        },
+        "three": {
+          "title": "Live Your Best Life",
+          "description": "Diabetes doesn't have to hold you back. By understanding your risk and taking proactive steps to manage your health, you can live a full and active life."
+        }
+      }
+    },
+    "benefit-2": {
+      "title": "Signs of Diabetes to Watch For",
+      "description": "Diabetes can be a silent condition, but there are signs and symptoms to watch for. If you experience any of these symptoms, it's important to speak with your healthcare provider.",
+      "children": {
+        "one": {
+          "title": "Increased Thirst and Frequent Urination",
+          "description": "High blood sugar levels cause more fluid to be pulled from your tissues, making you feel thirsty and leading to more frequent trips to the bathroom."
+        },
+        "two": {
+          "title": "Extreme Fatigue",
+          "description": "When your body can't use sugar for energy, it starts to break down fat and muscle for fuel, which can make you feel very tired."
+        },
+        "three": {
+          "title": "Blurred Vision",
+          "description": "High blood sugar levels can cause the lenses in your eyes to swell, leading to vision problems."
+        }
+      }
+    },
+    "benefit-3": {
+      "title": "Take the Test Now!",
+      "description": "Simply answer a few questions about your lifestyle and health. Our algorithm will analyze your answers and categorize your risk into one of three categories:",
+      "children": {
+        "one": {
+          "title": "No Diabetes",
+          "description": "Great news! Learn how to maintain your healthy lifestyle."
+        },
+        "two": {
+          "title": "Prediabetes",
+          "description": "You're at risk, but there's still time to make changes. Discover steps to prevent diabetes."
+        },
+        "three": {
+          "title": "Diabetes",
+          "description": "It's important to act now. Find out how to manage your condition effectively."
+        }
+      }
+    },
+    "faq": {
+      "pretitle": "FAQ",
+      "title": "Frequently Asked Questions",
+      "subtitle": "Explore Common Questions About This Test and Diabetes",
+      "questions": {
+        "one": {
+          "question": "How long does the test take?",
+          "answer": "The test takes about 5 minutes to complete."
+        },
+        "two": {
+          "question": "Is my information secure?",
+          "answer": "Absolutely. We prioritize your privacy and ensure that all data is kept confidential."
+        },
+        "three": {
+          "question": "What happens if I'm at risk for diabetes?",
+          "answer": "If your results indicate prediabetes or diabetes, we will provide you with resources and next steps to manage your health."
+        },
+        "four": {
+          "question": "Can I take the test more than once?",
+          "answer": "Yes, you can take the test as often as you like to monitor your risk."
+        }
+      }
+    },
+    "cta": {
+      "title": "Ready to Get Started?",
+      "subtitle": "Your health is in your hands. Don't wait until it's too late. Click the button to take the test and take the first step towards a healthier you.",
+      "button": "Start the Test"
+    }
+  },
+  "test": {
+    "benefit": {
+      "title": "How to Take the Test",
+      "children": {
+        "one": {
+          "title": "Start the Test",
+          "description": "Click the button above to start the test."
+        },
+        "two": {
+          "title": "Answer the Questions",
+          "description": "Answer a series of questions about your lifestyle and health."
+        },
+        "three": {
+          "title": "Submit Your Answers",
+          "description": "Once you've completed all the questions, submit your responses."
+        },
+        "four": {
+          "title": "Receive Results via Email",
+          "description": "Your results will be processed according to the queue and sent to your email."
+        }
+      }
+    }
+  },
+  "questions": {
+    "Email": {
+      "title": "Email Address",
+      "description": "We need your email address for sending the test result only."
+    },
+    "Sex": {
+      "title": "What is your sex?",
+      "options": {
+        "female": "Female",
+        "male": "Male"
+      }
+    },
+    "Age": {
+      "title": "What is your age category?",
+      "options": {
+        "18-24": "18-24",
+        "25-29": "25-29",
+        "30-34": "30-34",
+        "35-39": "35-39",
+        "40-44": "40-44",
+        "45-49": "45-49",
+        "50-54": "50-54",
+        "55-59": "55-59",
+        "60-64": "60-64",
+        "65-69": "65-69",
+        "70-74": "70-74",
+        "75-79": "75-79",
+        "80orolder": "80 or older"
+      }
+    },
+    "HighBP": {
+      "title": "Diagnosed with high blood pressure",
+      "options": {
+        "nohighbp": "No high BP",
+        "highbp": "High BP"
+      }
+    },
+    "HighChol": {
+      "title": "Diagnosed with high cholesterol",
+      "options": {
+        "nohighcholesterol": "No high cholesterol",
+        "highcholesterol": "High cholesterol"
+      }
+    },
+    "CholCheck": {
+      "title": "Did a cholesterol check in the last 5 years",
+      "options": {
+        "no": "No",
+        "yes": "Yes"
+      }
+    },
+    "BMI": {
+      "title": "What is your Body Mass Index (BMI)?",
+      "description": "BMI = Weight(Kg) / Height(m)"
+    },
+    "Smoker": {
+      "title": "Have you smoked at least 100 cigarettes in your entire life? (Note: 5 packs = 100 cigarettes)",
+      "options": {
+        "no": "No",
+        "yes": "Yes"
+      }
+    },
+    "Stroke": {
+      "title": "Have you ever had a stroke?",
+      "options": {
+        "no": "No",
+        "yes": "Yes"
+      }
+    },
+    "HeartDiseaseorAttack": {
+      "title": "Have you ever been told you had coronary heart disease (CHD) or myocardial infarction (MI)?",
+      "options": {
+        "no": "No",
+        "yes": "Yes"
+      }
+    },
+    "PhysActivity": {
+      "title": "Have you participated in any physical activity in the past 30 days?",
+      "options": {
+        "no": "No",
+        "yes": "Yes"
+      }
+    },
+    "Fruits": {
+      "title": "Do you consume fruit 1 or more times per day?",
+      "options": {
+        "no": "No",
+        "yes": "Yes"
+      }
+    },
+    "Veggies": {
+      "title": "Do you consume vegetables 1 or more times per day?",
+      "options": {
+        "no": "No",
+        "yes": "Yes"
+      }
+    },
+    "HvyAlcoholConsump": {
+      "title": "Are you a heavy drinker? (Adult men having more than 14 drinks per week and adult women having more than 7 drinks per week)",
+      "options": {
+        "no": "No",
+        "yes": "Yes"
+      }
+    },
+    "AnyHealthcare": {
+      "title": "Do you have any kind of health care coverage, including health insurance, prepaid plans such as HMO, etc.?",
+      "options": {
+        "no": "No",
+        "yes": "Yes"
+      }
+    },
+    "NoDocbcCost": {
+      "title": "Was there a time in the past 12 months when you needed to see a doctor but couldn't because of cost?",
+      "options": {
+        "no": "No",
+        "yes": "Yes"
+      }
+    },
+    "GenHlth": {
+      "title": "In general, would you say that your health is:",
+      "options": {
+        "excellent": "Excellent",
+        "verygood": "Very good",
+        "good": "Good",
+        "fair": "Fair",
+        "poor": "Poor"
+      }
+    },
+    "MentHlth": {
+      "title": "Thinking about your mental health, which includes stress, depression, and problems with emotions, for how many days during the past 30 days was your mental health not good?"
+    },
+    "PhysHlth": {
+      "title": "Thinking about your physical health, which includes physical illness and injury, for how many days during the past 30 days was your physical health not good?"
+    },
+    "DiffWalk": {
+      "title": "Do you have serious difficulty walking or climbing stairs?",
+      "options": {
+        "no": "No",
+        "yes": "Yes"
+      }
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Read the latest articles on diabetes and health"
+  }
+}

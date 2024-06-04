@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.main-select {
+  background-image: url("/img/select.svg");
+  background-repeat: no-repeat;
+  background-position: right 0.5rem center;
+  background-size: 1.5rem;
+  padding-right: 2rem;
+}

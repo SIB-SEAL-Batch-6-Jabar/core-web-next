@@ -9,7 +9,10 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import React from "react";
 
-const getPost = async (slug: string): Promise<Post | null> => {
+const getPost = async (
+  slug: string,
+  locale: "en" | "id" = "en"
+): Promise<Post | null> => {
   const payload = await getPayload();
   const posts = await payload
     .find({
@@ -17,6 +20,7 @@ const getPost = async (slug: string): Promise<Post | null> => {
       depth: 3,
       sort: "createdAt",
       pagination: false,
+      locale,
       limit: 1,
       where: {
         and: [
@@ -41,9 +45,13 @@ const getPost = async (slug: string): Promise<Post | null> => {
   return posts;
 };
 
-async function BlogPostPage({ params }: { params: { slug: string } }) {
-  const { slug } = params;
-  const post = await getPost(slug);
+async function BlogPostPage({
+  params,
+}: {
+  params: { slug: string; locale: "en" | "id" };
+}) {
+  const { slug, locale } = params;
+  const post = await getPost(slug, locale);
 
   if (!post) {
     return notFound();

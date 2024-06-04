@@ -1,6 +1,6 @@
 import { Media, Post } from "@/payload-types";
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/navigation";
 import React from "react";
 import moment from "moment";
 

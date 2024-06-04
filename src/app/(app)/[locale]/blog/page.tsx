@@ -4,19 +4,17 @@ import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
 import Pagination from "@/components/pagination";
 import { getPayload } from "@/lib/payload";
-import { Media } from "@/payload-types";
-import { getDocument } from "@/payload/utils/getDocument";
 import { Metadata } from "next";
-import Image from "next/image";
-import { redirect } from "next/navigation";
+import { getTranslations } from "next-intl/server";
 import React from "react";
 
-const getPosts = async (page: number = 1) => {
+const getPosts = async (page: number = 1, locale: "en" | "id" = "en") => {
   const payload = await getPayload();
   const posts = await payload.find({
     collection: "posts",
     pagination: true,
     depth: 3,
+    locale: locale,
     page: page,
     sort: "-publishedAt",
     where: {
@@ -31,19 +29,22 @@ const getPosts = async (page: number = 1) => {
 
 async function BlogPage({
   searchParams,
+  params: { locale },
 }: {
   searchParams?: { search?: string; page?: string };
+  params: { locale: "en" | "id" };
 }) {
-  const posts = await getPosts(+searchParams?.page! || 1);
+  const posts = await getPosts(+searchParams?.page! || 1, locale);
+  const t = await getTranslations("blog");
 
   return (
     <>
       <Navbar />
       <Container>
-        <h1 className="text-4xl font-bold text-center text-gray-800">Blog</h1>
-        <p className="text-center text-gray-500 mt-2 mb-12">
-          Read the latest articles on diabetes and health
-        </p>
+        <h1 className="text-4xl font-bold text-center text-gray-800">
+          {t("title")}
+        </h1>
+        <p className="text-center text-gray-500 mt-2 mb-12">{t("subtitle")}</p>
 
         <div className="flex flex-col gap-4 md:max-w-2xl mx-auto w-full">
           {posts.docs.map((post) => {

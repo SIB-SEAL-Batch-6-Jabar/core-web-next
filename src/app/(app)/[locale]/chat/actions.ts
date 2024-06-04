@@ -23,7 +23,7 @@ export async function continueConversation(history: Message[]) {
     const { textStream } = await streamText({
       model: groq("llama3-8b-8192"),
       system:
-        "You are a helpful assistant to assist with diabetes disease and providing personalized information to the user.",
+        "You are a helpful assistant to assist with diabetes disease and providing personalized information to the user. You must reply with the same language as the user.",
       messages: history,
     });
 

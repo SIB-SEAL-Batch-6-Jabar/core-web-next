@@ -20,6 +20,7 @@ import { S3_PLUGIN_CONFIG } from "./payload/plugins/s3";
 import sharp from "sharp";
 import { Posts } from "./payload/collections/Posts";
 import { Media } from "./payload/collections/media";
+import { getCertificate } from "./db-certificate";
 
 const filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(filename);
@@ -31,7 +32,7 @@ export default buildConfig({
   localization: {
     locales: ["en", "id"],
     defaultLocale: "en",
-    fallback: true
+    fallback: true,
   },
   collections: [Users, Posts, Media],
   editor: lexicalEditor({
@@ -50,7 +51,7 @@ export default buildConfig({
       connectionString: process.env.DATABASE_URL || "",
       ssl: {
         rejectUnauthorized: false,
-        ca: readFileSync(path.resolve(dirname, "ca-aws.pem")).toString(),
+        ca: getCertificate(),
       },
     },
   }),

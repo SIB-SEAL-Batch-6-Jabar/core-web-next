@@ -6,12 +6,12 @@ import InputForm from "@/components/form/input";
 import SelectForm from "@/components/form/select";
 import { z } from "zod";
 import { API } from "@/utils/axios";
-import { AxiosError } from "axios";
+import { AxiosError, AxiosHeaders } from "axios";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
 import { ArrowPathIcon } from "@heroicons/react/20/solid";
 import { TestMessage } from "../../../../global";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 function StartTest() {
   const t = useTranslations("questions");
@@ -20,6 +20,7 @@ function StartTest() {
   const [answer, setAnswer] = useState<{
     [key: string]: string | number | undefined;
   }>({});
+  const locale = useLocale();
 
   const handleChange: React.ChangeEventHandler<
     HTMLInputElement | HTMLSelectElement
@@ -45,7 +46,6 @@ function StartTest() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(e.currentTarget.entrie);
     setLoading(true);
 
     try {
@@ -127,7 +127,14 @@ function StartTest() {
         throw errors;
       }
 
-      const response = await API.post("/calculate/", result.data);
+      console.log(locale);
+
+      const response = await API.post("/calculate/", result.data, {
+        headers: {
+          "X-User-Language": locale,
+          "Content-Type": "application/json",
+        },
+      });
 
       if (response.status == 200) {
         const MySwal = withReactContent(Swal);

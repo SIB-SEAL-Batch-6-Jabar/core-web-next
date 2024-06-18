@@ -30,13 +30,13 @@ jobs:
             - name: add env
               run: |
                 cat <<EOT >> .env
-                NEXT_PUBLIC_BACKEND_URL="http://localhost:5050"
+                NEXT_PUBLIC_BACKEND_URL="http://si-manis.my.id:5050"
                 GROQ_API_KEY="${{secrets.GROQ_API_KEY}}"
                 
                 DATABASE_URL="${{secrets.DATABASE_URL}}"
                 
                 PAYLOAD_SECRET="${{ secrets.PAYLOAD_SECRET}}"
-                PAYLOAD_PUBLIC_SERVER_URL="http://localhost:3000"
+                PAYLOAD_PUBLIC_SERVER_URL="http://si-manis.my.id:3000"
                 
                 REVALIDATION_KEY="${{ secrets.REVALIDATION_KEY}}"
                 NEXT_PRIVATE_REVALIDATION_KEY="${{ secrets.NEXT_PRIVATE_REVALIDATION_KEY}}"

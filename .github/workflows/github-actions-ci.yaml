@@ -34,7 +34,8 @@ jobs:
                 NEXT_PUBLIC_BACKEND_URL="http://si-manis.my.id:5050"
                 GROQ_API_KEY="${{secrets.GROQ_API_KEY}}"
                 
-                DATABASE_URL="${{secrets.DATABASE_URL}}"
+                # DATABASE_URL="${{secrets.DATABASE_URL}}"
+                DATABASE_URL="postgresql://postgres:simanis123!@simanis-dev.cl4eug6aqfs3.ap-southeast-1.rds.amazonaws.com:5432/simanis"
                 
                 PAYLOAD_SECRET="${{ secrets.PAYLOAD_SECRET}}"
                 PAYLOAD_PUBLIC_SERVER_URL="http://si-manis.my.id:3000"

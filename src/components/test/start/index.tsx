@@ -127,14 +127,7 @@ function StartTest() {
         throw errors;
       }
 
-      console.log(locale);
-
-      const response = await API.post("/calculate/", result.data, {
-        headers: {
-          "X-User-Language": locale,
-          "Content-Type": "application/json",
-        },
-      });
+      const response = await API.post("/calculate/", result.data);
 
       if (response.status == 200) {
         const MySwal = withReactContent(Swal);

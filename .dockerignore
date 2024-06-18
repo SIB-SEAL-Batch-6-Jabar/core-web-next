@@ -5,3 +5,6 @@ npm-debug.log
 README.md
 .next
 .git
+.github
+docker-compose.yaml
+k8s*.yaml

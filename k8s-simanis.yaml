@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simanis-core-web-next
+  labels: 
+    app: simanis-core-web-next
+spec:
+  selector:
+    matchLabels:
+      app: simanis-core-web-next
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: simanis-core-web-next
+        env: simanis
+    spec:
+      containers:
+      - name: simanis-core-web-next
+        image: 646758500755.dkr.ecr.us-east-1.amazonaws.com/simanis-core-web-next:latest #ecr
+        ports:
+          - containerPort: 3000
+        imagePullPolicy: "Always"
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: simanis-core-web-next
+spec:
+  type: LoadBalancer
+  selector:
+    env: simanis
+  ports:
+    - protocol: TCP
+      name: landing
+      port: 80
+      targetPort: 3000
+    - protocol: TCP
+      name: submit
+      port: 5050
+      targetPort: 5050

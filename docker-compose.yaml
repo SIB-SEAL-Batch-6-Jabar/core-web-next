@@ -1,12 +1,17 @@
 version: '3.8'
 
 services:
-  core-web-next:
+  simanis-core-web-next:
     build:
       context: .
       dockerfile: Dockerfile
-    image: core-web-next
-    container_name: core-web-next-demo
+    image: simanis-core-web-next
+    container_name: simanis-core-web-next
+    # network_mode: host
     ports:
       - "80:3000"
     restart: unless-stopped
+
+networks:
+  default:
+    name: simanis

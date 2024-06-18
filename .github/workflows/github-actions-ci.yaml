@@ -30,6 +30,7 @@ jobs:
             - name: add env
               run: |
                 cat <<EOT >> .env
+                DATABASE_REGION="us-east-1"
                 NEXT_PUBLIC_BACKEND_URL="http://si-manis.my.id:5050"
                 GROQ_API_KEY="${{secrets.GROQ_API_KEY}}"
                 

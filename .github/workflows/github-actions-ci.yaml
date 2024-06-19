@@ -31,14 +31,14 @@ jobs:
               run: |
                 cat <<EOT >> .env
                 DATABASE_REGION="ap-southeast-1"
-                NEXT_PUBLIC_BACKEND_URL="https://si-manis.my.id:5050"
+                NEXT_PUBLIC_BACKEND_URL="http://si-manis.my.id:5050"
                 GROQ_API_KEY="${{secrets.GROQ_API_KEY}}"
                 
                 # DATABASE_URL="${{secrets.DATABASE_URL}}"
                 DATABASE_URL="${{secrets.DATABASE_URL_MAIN}}"
                 
                 PAYLOAD_SECRET="${{ secrets.PAYLOAD_SECRET}}"
-                PAYLOAD_PUBLIC_SERVER_URL="https://si-manis.my.id:443"
+                PAYLOAD_PUBLIC_SERVER_URL="http://si-manis.my.id:80"
                 
                 REVALIDATION_KEY="${{ secrets.REVALIDATION_KEY}}"
                 NEXT_PRIVATE_REVALIDATION_KEY="${{ secrets.NEXT_PRIVATE_REVALIDATION_KEY}}"

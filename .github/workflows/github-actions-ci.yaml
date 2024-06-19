@@ -35,7 +35,7 @@ jobs:
                 GROQ_API_KEY="${{secrets.GROQ_API_KEY}}"
                 
                 # DATABASE_URL="${{secrets.DATABASE_URL}}"
-                DATABASE_URL="postgresql://postgres:simanis123!@simanis-dev.cl4eug6aqfs3.ap-southeast-1.rds.amazonaws.com:5432/simanis"
+                DATABASE_URL="${{secrets.DATABASE_URL_MAIN}}"
                 
                 PAYLOAD_SECRET="${{ secrets.PAYLOAD_SECRET}}"
                 PAYLOAD_PUBLIC_SERVER_URL="https://si-manis.my.id:443"

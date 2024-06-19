@@ -56,10 +56,10 @@ spec:
     env: simanis
   ports:
     - protocol: TCP
-      name: landing-https
+      name: landing
       port: 443
       targetPort: 3000
     - protocol: TCP
-      name: submit-http
+      name: submit
       port: 5050
       targetPort: 5050

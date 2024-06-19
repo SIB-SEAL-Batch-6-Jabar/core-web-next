@@ -38,7 +38,7 @@ jobs:
                 DATABASE_URL="postgresql://postgres:simanis123!@simanis-dev.cl4eug6aqfs3.ap-southeast-1.rds.amazonaws.com:5432/simanis"
                 
                 PAYLOAD_SECRET="${{ secrets.PAYLOAD_SECRET}}"
-                PAYLOAD_PUBLIC_SERVER_URL="https://si-manis.my.id:443"
+                PAYLOAD_PUBLIC_SERVER_URL="http://si-manis.my.id:80"
                 
                 REVALIDATION_KEY="${{ secrets.REVALIDATION_KEY}}"
                 NEXT_PRIVATE_REVALIDATION_KEY="${{ secrets.NEXT_PRIVATE_REVALIDATION_KEY}}"

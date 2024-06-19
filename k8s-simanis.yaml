@@ -23,7 +23,7 @@ spec:
         imagePullPolicy: "Always"
 
 ---
-
+# default
 # apiVersion: v1
 # kind: Service
 # metadata:
@@ -42,24 +42,56 @@ spec:
 #       port: 5050
 #       targetPort: 5050
 
-apiVersion: v1
-kind: Service
+# ssl
+# apiVersion: v1
+# kind: Service
+# metadata:
+#   name: simanis-core-web-next
+#   annotations:
+#     service.beta.kubernetes.io/aws-load-balancer-backend-protocol: "http"
+#     service.beta.kubernetes.io/aws-load-balancer-ssl-cert: "arn:aws:acm:us-east-1:646758500755:certificate/6076c1da-6917-4e75-853b-c7f80900022a"
+#     service.beta.kubernetes.io/aws-load-balancer-ssl-ports: "443,5050"
+# spec:
+#   type: LoadBalancer
+#   selector:
+#     env: simanis
+#   ports:
+#     - protocol: TCP
+#       name: landing
+#       port: 443
+#       targetPort: 3000
+#     - protocol: TCP
+#       name: submit
+#       port: 5050
+#       targetPort: 5050
+
+# ingress nginx
+apiVersion: networking.k8s.io/v1
+kind: Ingress
 metadata:
   name: simanis-core-web-next
   annotations:
-    service.beta.kubernetes.io/aws-load-balancer-backend-protocol: "http"
-    service.beta.kubernetes.io/aws-load-balancer-ssl-cert: "arn:aws:acm:us-east-1:646758500755:certificate/6076c1da-6917-4e75-853b-c7f80900022a"
-    service.beta.kubernetes.io/aws-load-balancer-ssl-ports: "443,5050"
+    kubernetes.io/ingress.class: "nginx"
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+    nginx.ingress.kubernetes.io/backend-protocol: "HTTP"
+    nginx.ingress.kubernetes.io/ssl-cert: "arn:aws:acm:us-east-1:646758500755:certificate/6076c1da-6917-4e75-853b-c7f80900022a"
 spec:
-  type: LoadBalancer
-  selector:
-    env: simanis
-  ports:
-    - protocol: TCP
-      name: landing
-      port: 443
-      targetPort: 3000
-    - protocol: TCP
-      name: submit
-      port: 5050
-      targetPort: 5050
+  rules:
+  - host: si-manis.my.id
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: simanis-core-web-next
+            port:
+              number: 443
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: simanis-core-web-next
+            port:
+              number: 5050
+

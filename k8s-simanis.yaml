@@ -24,20 +24,43 @@ spec:
 
 ---
 
+# apiVersion: v1
+# kind: Service
+# metadata:
+#   name: simanis-core-web-next
+#   an
+# spec:
+#   type: LoadBalancer
+#   selector:
+#     env: simanis
+#   ports:
+#     - protocol: TCP
+#       name: landing
+#       port: 80
+#       targetPort: 3000
+#     - protocol: TCP
+#       name: submit
+#       port: 5050
+#       targetPort: 5050
+
 apiVersion: v1
 kind: Service
 metadata:
   name: simanis-core-web-next
+  annotations:
+    service.beta.kubernetes.io/aws-load-balancer-backend-protocol: "http"
+    service.beta.kubernetes.io/aws-load-balancer-ssl-cert: "arn:aws:acm:us-east-1:646758500755:certificate/6076c1da-6917-4e75-853b-c7f80900022a"
+    service.beta.kubernetes.io/aws-load-balancer-ssl-ports: "443,5050"
 spec:
   type: LoadBalancer
   selector:
     env: simanis
   ports:
     - protocol: TCP
-      name: landing
-      port: 80
+      name: landing-https
+      port: 443
       targetPort: 3000
     - protocol: TCP
-      name: submit
+      name: submit-https
       port: 5050
       targetPort: 5050
